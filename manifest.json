@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Stamp Snapshotter",
+    "description": "Lets you snapshot stamps",
+    "version": "1.0",
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": "stampIcon.png"
+    },
+    "permissions": ["scripting", "activeTab", "storage"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "js": ["index.js"],
+            "matches": [
+                "https://*.idleontoolbox.com/data"
+            ]
+        }
+    ]
+  }
