@@ -13,10 +13,10 @@ document.getElementById("snapshot-btn").onclick = async() => {
                     });
                 }
 
-                const div = document.getElementsByClassName("MuiCollapse-wrapperInner")
+                const div = document.getElementsByClassName("css-8atqhb")
                 let parsedData;
                 try {
-                    parsedData = JSON.parse(div[0].lastChild.textContent);
+                    parsedData = JSON.parse(div[1].lastChild.textContent);
                 } catch (error) {
                     console.error("Error parsing JSON:", error);
                     return "Error: Unable to parse data from the page";
